@@ -1,6 +1,6 @@
 # DataStructures
 
-A Python implementation of common data structures for educational purposes.
+A comprehensive Python library implementing fundamental data structures and algorithms. This project provides efficient, well-tested implementations of common data structures used in computer science.
 
 ## Implemented Data Structures
 
@@ -25,14 +25,36 @@ A First-In-First-Out (FIFO) queue implementation with the following operations:
 
 ## Usage
 
-This section will be populated as project functionality is developed. Add specific usage examples and instructions as features are implemented.
+```python
+from linkedlist import LinkedList
+
+# Create a new linked list
+ll = LinkedList(5)
+
+# Add elements
+ll.append(10)
+ll.append(15)
+ll.prepend(3)
+
+# Print the list
+ll.print_list()  # Output: 3, 5, 10, 15
+
+# Access and modify
+node = ll.get(1)
+ll.set_value(1, 7)
+
+# Remove elements
+ll.pop()      # Remove last element
+ll.pop_first()  # Remove first element
+
+# Reverse
+ll.reverse()
+```
 
 ## Project Structure
 
-The repository structure will be organized as follows:
-
-- Root directory: Main project files and configuration
-- Additional directories will be created as the project evolves
+- `linkedlist.py` - Singly linked list implementation
+- Additional data structures (queue, stack, tree, hash table) coming soon
 
 ## Data Structures Implemented
 
@@ -77,21 +99,17 @@ The repository structure will be organized as follows:
 
 ```mermaid
 graph TD
-    A[DataStructures Project]
-    A --> B[HashTable]
-    A --> C[LinkedList]
-    A --> D[DoublyLinkedList]
-    A --> E[Stack]
-    A --> F[Queue]
-    A --> G[Tree]
-    
-    B -->|Key-Value Storage| H[Hash Function]
-    H -->|Collision Resolution| I[Chaining]
-    C -->|Sequential Access| J[Node Linking]
-    D -->|Bidirectional| J
-    E -->|LIFO| J
-    F -->|FIFO| J
-    G -->|Hierarchical| K[Tree Nodes]
+    A[LinkedList Class] --> B[Node Class]
+    A --> C[Append]
+    A --> D[Pop]
+    A --> E[Prepend]
+    A --> F[Pop First]
+    A --> G[Get]
+    A --> H[Set Value]
+    A --> I[Insert]
+    A --> J[Remove]
+    A --> K[Reverse]
+    A --> L[Print List]
 ```
 
 ## Usage Example
@@ -151,3 +169,21 @@ Follow standard Git workflows when contributing to this project. Create feature 
 ## License
 
 Refer to the LICENSE file (when created) for licensing information.
+
+### Linked List
+
+A singly linked list implementation with support for common operations:
+- **append(value)**: Add a node to the end of the list
+- **pop()**: Remove and return the last node
+- **prepend(value)**: Add a node to the beginning of the list
+- **pop_first()**: Remove and return the first node
+- **get(index)**: Retrieve the node at a given index
+- **set_value(index, value)**: Update the value at a given index
+- **insert(index, value)**: Insert a node at a specific position
+- **remove(index)**: Remove and return the node at a given index
+- **reverse()**: Reverse the order of all nodes in the list
+- **print_list()**: Display all values in the list in order
+
+## Author
+
+Ram Shukla, Hyderabad, India
