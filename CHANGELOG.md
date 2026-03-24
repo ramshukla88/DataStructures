@@ -7,6 +7,17 @@ Added a new HashTable data structure implementation with support for basic hash 
 ### Create queue.py
 Implemented a Queue (FIFO) data structure with Node class supporting enqueue, dequeue, and print_queue operations. The queue maintains references to first and last nodes for efficient front and back operations.
 
+## [df40d18] - 2024-05-14
+### dll and stack completed
+
+Added two new core data structure implementations to the project:
+
+**DoublyLinkedList** - A bidirectional linked list implementation with comprehensive node manipulation capabilities. Features optimized `get()` method that searches from the nearest end (head or tail) based on the target index position, improving performance for operations on list elements. Supports append, prepend, pop, pop_first, insert, remove, and value updates at arbitrary indices.
+
+**Stack** - A LIFO (Last-In-First-Out) data structure built on a node-based architecture. Implements standard stack operations including push, pop, and utility methods for visualization. Maintains a height counter for O(1) size queries.
+
+These implementations complement the existing LinkedList and recently added Queue, Tree, and HashTable modules, providing a comprehensive toolkit of fundamental data structures for educational purposes.
+
 ## [0f6a829] - 2024-05-07
 
 ### Initial commit
