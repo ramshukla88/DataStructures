@@ -25,34 +25,14 @@ A First-In-First-Out (FIFO) queue implementation with the following operations:
 
 ## Usage
 
-```python
-from queue import Queue
-
-# Create a queue and add elements
-my_queue = Queue(1)
-my_queue.enqueue(2)
-my_queue.enqueue(3)
-
-# Print queue contents
-my_queue.print_queue()  # Output: 1 2 3
-
-# Remove from queue
-node = my_queue.dequeue()
-print(node.value)  # Output: 1
-```
+This section will be populated as project functionality is developed. Add specific usage examples and instructions as features are implemented.
 
 ## Project Structure
 
-```
-DataStructures/
-├── hashTable.py
-├── linkedlist.py
-├── doublyLinkedList.py
-├── stack.py
-├── queue.py
-├── tree.py
-└── .idea/
-```
+The repository structure will be organized as follows:
+
+- Root directory: Main project files and configuration
+- Additional directories will be created as the project evolves
 
 ## Data Structures Implemented
 
@@ -138,3 +118,36 @@ print(my_hash_table.keys())  # Output: ['bolts', 'washers', 'lumber']
 # View internal structure
 my_hash_table.print_table()
 ```
+
+# Project Repository
+
+This is a new repository initialized with an empty first commit.
+
+## Getting Started
+
+This repository has been set up as a blank slate for development. Follow the sections below to begin working with this project.
+
+## Prerequisites
+
+- Ensure you have the necessary development tools installed for your intended project type.
+- Review the project requirements before starting development.
+
+## Installation
+
+1. Clone the repository to your local machine:
+   ```bash
+   git clone <repository-url>
+   cd <repository-name>
+   ```
+
+2. Initialize the project structure according to your needs.
+
+3. Install any required dependencies based on your tech stack.
+
+## Contributing
+
+Follow standard Git workflows when contributing to this project. Create feature branches, make atomic commits, and submit pull requests for review.
+
+## License
+
+Refer to the LICENSE file (when created) for licensing information.
