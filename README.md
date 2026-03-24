@@ -97,19 +97,14 @@ ll.reverse()
 
 ## System Architecture
 
-```mermaid
+```
 graph TD
-    A[LinkedList Class] --> B[Node Class]
-    A --> C[Append]
-    A --> D[Pop]
-    A --> E[Prepend]
-    A --> F[Pop First]
-    A --> G[Get]
-    A --> H[Set Value]
-    A --> I[Insert]
-    A --> J[Remove]
-    A --> K[Reverse]
-    A --> L[Print List]
+    A[Node] -->|used by| B[DoublyLinkedList]
+    A -->|used by| C[Stack]
+    A -->|used by| D[LinkedList]
+    A -->|used by| E[Queue]
+    F[Tree] -.->|hierarchical structure| A
+    G[HashTable] -.->|key-value pairs| A
 ```
 
 ## Usage Example
@@ -187,3 +182,73 @@ A singly linked list implementation with support for common operations:
 ## Author
 
 Ram Shukla, Hyderabad, India
+
+# Data Structures
+
+A comprehensive Python implementation of fundamental data structures and algorithms.
+
+## Overview
+
+This project provides clean, educational implementations of essential data structures including:
+- **Linked List** (`linkedlist.py`) - Singly linked list with insert, delete, and traversal operations
+- **Doubly Linked List** (`doublyLinkedList.py`) - Bidirectional linked list enabling efficient traversal from both ends
+- **Stack** (`stack.py`) - Last-in-first-out (LIFO) data structure for push/pop operations
+- **Queue** (`queue.py`) - First-in-first-out (FIFO) data structure
+- **Tree** (`tree.py`) - Hierarchical tree structure implementation
+- **Hash Table** (`hashTable.py`) - Key-value mapping with hash-based lookup
+
+## Data Structures
+
+### DoublyLinkedList
+
+A doubly linked list implementation that maintains references to both the next and previous nodes, enabling efficient traversal in both directions.
+
+**Key Methods:**
+- `append(value)` - Add element to the end
+- `prepend(value)` - Add element to the beginning
+- `pop()` - Remove element from the end
+- `pop_first()` - Remove element from the beginning
+- `get(index)` - Retrieve node at specific index (optimized: searches from nearer end)
+- `set_value(index, value)` - Update value at specific index
+- `insert(index, value)` - Insert element at specific index
+- `remove(index)` - Remove element at specific index
+- `print_list()` - Display all elements
+
+### Stack
+
+A Last-In-First-Out (LIFO) data structure where elements are added and removed from the same end (top).
+
+**Key Methods:**
+- `push(value)` - Add element to the top
+- `pop()` - Remove and return element from the top
+- `print_stack()` - Display all elements
+
+**Properties:**
+- `top` - Reference to the topmost node
+- `height` - Current number of elements in the stack
+
+## Usage Examples
+
+### DoublyLinkedList
+
+```python
+from doublyLinkedList import DoublyLinkedList
+
+dll = DoublyLinkedList(1)
+dll.append(2)
+dll.append(3)
+dll.prepend(0)
+print(dll.get(2).value)  # Output: 2
+```
+
+### Stack
+
+```python
+from stack import Stack
+
+stack = Stack(4)
+stack.push(6)
+stack.push(8)
+stack.pop()
+stack.print_stack()
+```
